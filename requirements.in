@@ -1,0 +1,6 @@
+loguru
+psycopg2
+flask
+gspread
+uvicorn
+gunicorn
