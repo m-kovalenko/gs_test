@@ -1,9 +1,7 @@
-import json
-
-from flask import Blueprint, Response, Request
+from flask import Blueprint, Response
 from loguru import logger
 
-from src.gspread import GSpread
+from src.gs import GSpread
 
 simple_page = Blueprint('api_page', __name__)
 

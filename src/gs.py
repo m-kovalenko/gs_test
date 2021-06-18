@@ -18,7 +18,7 @@ class GSpread:
     def save_todo_tasks_to_db(self):
         todo_sheet = self.load_sheet_by_name('gspread test todo')
         result_values = todo_sheet.get(TASKS_RANGE)
-        todo_tasks = [t[0] for t in result_values]
+        todo_tasks = [t[0] for t in result_values if t]
         with Database() as db:
             db.replace_tasks(todo_tasks)
 

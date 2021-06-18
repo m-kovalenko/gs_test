@@ -1,6 +1,6 @@
 import os
 
-SERVICE_ACCOUNT_PATH = '/home/maksym/git/gs_test/var/for-tests-304014-d5320cdfef53.json'
+SERVICE_ACCOUNT_PATH = './var/for-tests-304014-d5320cdfef53.json'
 
 DB_CREDENTIALS = {
     'host': '3.82.236.61',

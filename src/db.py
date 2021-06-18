@@ -50,6 +50,7 @@ class Database:
         sql = f"""delete from todos_tasks;"""
         with self.conn.cursor() as cur:
             cur.execute(sql)
+            self.conn.commit()
 
     def insert_tasks(self, tasks: list[str]):
         args = [[t] for t in tasks]
@@ -58,6 +59,7 @@ class Database:
             VALUES (%s)"""
         with self.conn.cursor() as cur:
             self.execute_chunks(cur, sql, args)
+            self.conn.commit()
 
     def replace_tasks(self, tasks):
         self.delete_tasks()
